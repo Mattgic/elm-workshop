@@ -13,7 +13,9 @@ type alias Category =
 categoriesPage : Html msg
 categoriesPage =
     div []
-        [ text "Content of the page" ]
+        [ h1 [] [text "Play within a given category"]
+        , 
+        ]
 
 
 categories : List Category
