@@ -6,8 +6,16 @@ import Html.Attributes exposing (class, href, id, src, style)
 
 resultPage : Int -> Html msg
 resultPage score =
+    let
+        message =
+            if score <= 3 then
+                "Keep going, I'm sure you can do better!"
+            else
+                "Congrats, this is really good!"
+    in
     div [ class "score" ]
         [ h1 [] [ text ("Your score: " ++ (toString score) ++ " / 5") ]
+        , p [] [text message]
         , a [ class "btn btn-primary", href "#" ] [ text "Replay" ]
         ]
 
